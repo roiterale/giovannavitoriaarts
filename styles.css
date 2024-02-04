@@ -1,0 +1,124 @@
+/* Estilos para a navegação */
+nav {
+  text-align: right; /* Alinha os itens à direita */
+  margin-right: 40px;
+  font-size: 20px;
+  font-style: italic;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+  font-weight: bold; /* Adicionando negrito */
+  background-color: rgb(255, 255, 255);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: rgb(160, 156, 156);
+}
+
+/* Estilos para o rodapé */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+}
+
+/* Estilos para o conteúdo principal */
+main {
+  text-align: center; /* Alinhar o conteúdo no centro */
+}
+
+h1 {
+  font-size: 40px;
+  background-color: #ffffff;
+}
+
+h2 {
+  font-weight: normal;
+  font-style: italic;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+.imagem-galeria {
+  width: 50px; /* Defina a largura desejada */
+  height: auto; /* Altura automática para manter a proporção da imagem */
+}
+
+/* Quadrados com imagens pequenas */
+
+.mosaico .mosaico {
+  display: inline-block; /* Alterado para inline-block para que os elementos fiquem em linha */
+  width: 50px; /* Ajuste conforme necessário */
+  height: 50px; /* Ajuste conforme necessário */
+  margin: 2px; /* Ajuste conforme necessário para um espaçamento uniforme */
+  vertical-align: middle * Alinhe verticalmente ao meio * /;
+}
+
+.imagem {
+  width: 200px; /* Modifique para 200px */
+  height: 200px; /* Modifique para 200px */
+  margin: 10px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.imagem img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease; /* Adiciona uma transição suave ao efeito de hover */
+}
+
+.imagem:hover img {
+  transform: scale(
+    1.1
+  ); /* Aumenta a escala da imagem em 10% ao passar o mouse sobre ela */
+}
+
+h3 {
+  font-weight: 100;
+  font-style: normal;
+  font-family: "Times New Roman", Times, serif;
+}
+
+hr {
+  width: 50%; /* Defina a largura desejada */
+  margin: 20px auto; /* Centralize horizontalmente e adicione margem superior e inferior */
+  border: none; /* Remova a borda padrão */
+  height: 1px; /* Defina a espessura da linha */
+  background-color: #ccc; /* Defina a cor da linha */
+}
+
+#main2 {
+  background-color: rgb(39, 37, 37);
+}
+
+/* styles.css */
+
+/* Remover sublinhado e definir cor preta para a legenda */
+.foto p {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(121, 116, 116); /* Definir cor preta */
+}
+
+/* Estilizar a borda da imagem */
+.foto img {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+/* Outros estilos... */
+#alinhar1 {
+  text-align: justify;
+}

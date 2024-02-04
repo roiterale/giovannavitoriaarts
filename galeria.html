@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giovanna Vitoria Arts - Galeria</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Estilos para o lightbox/modal */
+      .lightbox {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 999;
+        text-align: center;
+      }
+      .lightbox img {
+        max-width: 80%;
+        max-height: 80%;
+        margin-top: 10%;
+      }
+      .fechar {
+        position: absolute;
+        top: 15px;
+        right: 35px;
+        color: white;
+        font-size: 40px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+      /* Estilo para o mosaico */
+      .mosaico {
+        display: inline-block;
+        width: 30%; /* Ajuste conforme necessário */
+        margin: 1%;
+        vertical-align: top;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 class="logo">&nbsp;&nbsp;&nbsp;&nbsp; Giovanna Vitoria Arts</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+
+    <h2>Meus Desenhos</h2>
+    <br />
+    <br />
+    <br />
+    <br />
+    <main id="main2">
+      <div class="mosaico">
+        <div class="imagem">
+          <div class="container">
+            <img
+              src="1.png"
+              alt="Imagem 1"
+              class="imagem-galeria"
+              style="cursor: pointer"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="mosaico">
+        <div class="imagem">
+          <div class="container">
+            <img
+              src="2.png"
+              alt="Imagem 2"
+              class="imagem-galeria"
+              style="cursor: pointer"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="mosaico">
+        <div class="imagem">
+          <div class="container">
+            <img
+              src="3.png"
+              alt="Imagem 3"
+              class="imagem-galeria"
+              style="cursor: pointer"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="mosaico">
+        <div class="imagem">
+          <div class="container">
+            <img
+              src="4.png"
+              alt="Imagem 4"
+              class="imagem-galeria"
+              style="cursor: pointer"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="mosaico">
+        <div class="imagem">
+          <div class="container">
+            <img
+              src="5.png"
+              alt="Imagem 5"
+              class="imagem-galeria"
+              style="cursor: pointer"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="mosaico">
+        <div class="imagem">
+          <div class="container">
+            <img
+              src="6.png"
+              alt="Imagem 6"
+              class="imagem-galeria"
+              style="cursor: pointer"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="mosaico">
+        <div class="imagem">
+          <div class="container">
+            <img
+              src="7.png"
+              alt="Imagem 7"
+              class="imagem-galeria"
+              style="cursor: pointer"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="mosaico">
+        <div class="imagem">
+          <div class="container">
+            <img
+              src="8.png"
+              alt="Imagem 8"
+              class="imagem-galeria"
+              style="cursor: pointer"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="mosaico">
+        <div class="imagem">
+          <div class="container">
+            <img
+              src="9.png"
+              alt="Imagem 9"
+              class="imagem-galeria"
+              style="cursor: pointer"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="mosaico">
+        <div class="imagem">
+          <div class="container">
+            <img
+              src="10.png"
+              alt="Imagem 10"
+              class="imagem-galeria"
+              style="cursor: pointer"
+            />
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 Giovanna</p>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+      <span class="fechar" onclick="fecharLightbox()">&times;</span>
+      <img src="" alt="Imagem ampliada" id="imagem-ampliada" />
+    </div>
+
+    <script>
+      // Função para abrir o lightbox com a imagem ampliada
+      document.querySelectorAll(".imagem-galeria").forEach(function (imagem) {
+        imagem.addEventListener("click", function () {
+          document.getElementById("lightbox").style.display = "block";
+          document.getElementById("imagem-ampliada").src = this.src;
+        });
+      });
+
+      // Função para fechar o lightbox
+      function fecharLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
