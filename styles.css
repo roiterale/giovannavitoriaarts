@@ -119,6 +119,10 @@ hr {
 }
 
 /* Outros estilos... */
-#alinhar1 {
-  text-align: justify;
+
+h4 {
+  text-align: center;
+  font-size: 18px;
+  font-family: cursive;
+  font-style: oblique;
 }
