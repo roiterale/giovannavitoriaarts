@@ -25,5 +25,16 @@ $(document).ready(function() {
   });
 });
 
+$(document).ready(function() {
+  $('.mosaico img').click(function() {
+    var imgSrc = $(this).attr('src');
+    $('.lightbox').html('<span class="fechar">&times;</span><img src="' + imgSrc + '">');
+    $('.lightbox').fadeIn();
+    $('.fechar').click(function() {
+      $('.lightbox').fadeOut();
+    });
+  });
+});
+
 
 </script>
