@@ -134,3 +134,36 @@ h5 {
   font-style: italic;
   font-weight: normal;
 }
+
+
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 480px) {
+  .mosaico {
+    width: calc(100% - 2%);
+  }
+}
+
+.mosaico {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  width: calc(30% - 2%); /* Subtraindo a margem */
+  margin: 1%;
+  vertical-align: top;
+  box-sizing: border-box; /* Inclui borda e padding no cálculo do tamanho */
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 768px) {
+  .mosaico {
+    width: calc(50% - 2%);
+  }
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 480px) {
+  .mosaico {
+    width: calc(100% - 2%);
+  }
+}
