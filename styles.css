@@ -59,14 +59,6 @@ h2 {
 
 /* Quadrados com imagens pequenas */
 
-.mosaico .mosaico {
-  display: inline-block; /* Alterado para inline-block para que os elementos fiquem em linha */
-  width: 50px; /* Ajuste conforme necessário */
-  height: 50px; /* Ajuste conforme necessário */
-  margin: 2px; /* Ajuste conforme necessário para um espaçamento uniforme */
-  vertical-align: middle * Alinhe verticalmente ao meio * /;
-}
-
 .imagem {
   width: 200px; /* Modifique para 200px */
   height: 200px; /* Modifique para 200px */
@@ -103,67 +95,29 @@ hr {
 
 #main2 {
   background-color: rgb(39, 37, 37);
+  padding: 20px; /* Adiciona um preenchimento interno para o conteúdo dentro de #main2 */
+  box-sizing: border-box; /* Garante que o preenchimento não afete a largura total do elemento */
+  overflow: auto; /* Adiciona uma barra de rolagem caso as imagens transbordem do contêiner */
 }
 
-/* styles.css */
-
-/* Remover sublinhado e definir cor preta para a legenda */
-.foto p {
-  font-family: Arial, Helvetica, sans-serif;
-  color: rgb(121, 116, 116); /* Definir cor preta */
+#main2 .conteudo {
+  display: flex; /* Usa flexbox para alinhar os elementos em uma linha */
+  flex-wrap: wrap; /* Permite que os elementos quebrem para a próxima linha */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 20px; /* Espaçamento entre os itens */
 }
 
-/* Estilizar a borda da imagem */
-.foto img {
-  border: 2px solid rgb(255, 255, 255);
+#main2 .conteudo .mosaico {
+  flex: 0 0 calc(50% - 10px); /* Define o tamanho para 50% do contêiner com espaçamento */
+  max-width: calc(
+    50% - 10px
+  ); /* Define a largura máxima para evitar quebrar em linhas menores */
+  height: auto; /* Altura automática para manter a proporção */
+  margin-bottom: 20px; /* Espaçamento inferior */
 }
 
-/* Outros estilos... */
-
-h4 {
-  text-align: center;
-  font-size: 18px;
-  font-family: cursive;
-  font-style: oblique;
-}
-
-h5 {
-  text-align: center;
-  font-size: 30px;
-  font-family:'Times New Roman', Times, serif
-  font-style: italic;
-  font-weight: normal;
-}
-
-
-
-/* Ajuste para telas muito pequenas */
-@media (max-width: 480px) {
-  .mosaico {
-    width: calc(100% - 2%);
-  }
-}
-
-.mosaico {
-  display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center; /* Centraliza verticalmente */
-  width: calc(30% - 2%); /* Subtraindo a margem */
-  margin: 1%;
-  vertical-align: top;
-  box-sizing: border-box; /* Inclui borda e padding no cálculo do tamanho */
-}
-
-/* Ajuste para telas menores */
-@media (max-width: 768px) {
-  .mosaico {
-    width: calc(50% - 2%);
-  }
-}
-
-/* Ajuste para telas muito pequenas */
-@media (max-width: 480px) {
-  .mosaico {
-    width: calc(100% - 2%);
-  }
+#main2 .conteudo .mosaico img {
+  width: 100%; /* Preenche o contêiner */
+  height: auto; /* Altura automática para manter a proporção */
+  object-fit: cover; /* Ajusta a imagem para cobrir o contêiner */
 }
