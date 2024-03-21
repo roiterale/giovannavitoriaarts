@@ -304,6 +304,25 @@
     <br />
     <br />
     <br />
+        <div class="carousel">
+      <div class="carousel-inner">
+        <img src="p1.jpeg" alt="Image 1">
+        <img src="p2.jpeg" alt="Image 2">
+        <img src="p3.jpeg" alt="Image 3">
+        <img src="p4.jpeg" alt="Image 3">
+        <img src="p5.jpeg" alt="Image 3">
+        <img src="p6.jpeg" alt="Image 3">
+        <img src="p7.jpeg" alt="Image 3">
+        <img src="p8.jpeg" alt="Image 3">
+        <img src="p9.jpeg" alt="Image 3">
+        <img src="p10.jpeg" alt="Image 3">
+        <!-- Adicione as demais imagens aqui -->
+      </div>
+      <button class="prev">Anterior</button>
+      <button class="next">Próximo</button>
+    </div>
+    
+    <script src="scripts.js"></script>
     <footer>
       <p>&copy; 2024 Giovanna</p>
     </footer>
@@ -326,6 +345,25 @@
       function fecharLightbox() {
         document.getElementById("lightbox").style.display = "none";
       }
+            document.addEventListener("DOMContentLoaded", function() {
+        const carouselInner = document.querySelector('.carousel-inner');
+        const prevBtn = document.querySelector('.prev');
+        const nextBtn = document.querySelector('.next');
+        let counter = 0;
+      
+        function slide(direction) {
+          const slideWidth = carouselInner.clientWidth;
+          if (direction === 'prev') {
+            counter = (counter - 1) % carouselInner.children.length;
+          } else {
+            counter = (counter + 1) % carouselInner.children.length;
+          }
+          carouselInner.style.transform = `translateX(-${counter * slideWidth}px)`;
+        }
+      
+        prevBtn.addEventListener('click', () => slide('prev'));
+        nextBtn.addEventListener('click', () => slide('next'));
+      });
     </script>
   </body>
 </html>
